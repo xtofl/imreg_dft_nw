@@ -20,14 +20,16 @@ descfname = os.path.join(SETUPDIR, 'doc', 'description.rst')
 longdesc = open(descfname, 'r', encoding='utf-8').read()
 
 st.setup(
-    name="imreg_dft",
+    name="imreg_dft_nw",
     version=imreg_dft.__version__,
     author=u"Matěj Týč",
     author_email="matej.tyc@gmail.com",
-    description=("Image registration utility using algorithms based on "
-                 "discrete Fourier transform (DFT, FFT)"),
+    description=("Tiny no-warn fork of imreg_dft, Image registration "
+                 "utility using algorithms based on "
+                 "discrete Fourier transform (DFT, FFT), "
+                 "To get rid of those np.bool deprecation warnings."),
     license="BSD",
-    url="https://github.com/matejak/imreg_dft",
+    url="https://github.com/xtofl/imreg_dft_nw",
     package_dir = {'': PKGDIR},
     packages = st.find_packages(PKGDIR),
     entry_points = {
@@ -46,7 +48,6 @@ st.setup(
     classifiers=[
         "Development Status :: 4 - Beta",
         "Natural Language :: English",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Intended Audience :: Science/Research",
         "Intended Audience :: Education",
